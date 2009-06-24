@@ -1,0 +1,78 @@
+/*
+  SKIN
+  All colour and background image styling.
+*/
+
+
+body {
+	color: #766D6A;
+	background: #CCC;
+}
+
+#page {
+	background-color: #fff;
+}
+
+#header {
+	border-color: #766c6a;
+	border-style: dashed;
+	padding: 20px;
+}
+
+#footer {
+	color: #fff;
+	background-color: #766c6a;
+}
+
+/* BIR */
+/*a.share-link,*/
+a#logo,
+a#beef-logo{
+	text-indent: -1000em;
+	overflow: hidden;
+	text-align: left;
+	display: block;
+}
+
+a#logo{
+	background: url('/images/logos/logo.gif') no-repeat; 	
+	width: 238px; 											/*Change this to the dimensions of the new image*/
+	height: 121px; 											/*Change this to the dimensions of the new image*/
+}
+
+a#beef-logo{
+	background: url('/images/logos/beef-logo.gif') no-repeat;
+	width: 40px;											/*Change this to the dimensions of the new image*/
+	height: 34px;											/*Change this to the dimensions of the new image*/
+}
+
+/*Share links*/
+
+/*a.share-link{
+	width: 16px;
+	height: 16px;
+}
+
+a#digg-submit{
+	background: transparent url("/images/icons/share-digg.gif") no-repeat 0 0px !important;
+}
+
+a#delicious-submit{
+	background: transparent url("/images/icons/share-delicious.gif") no-repeat 0 0px !important;
+}
+
+
+a#facebook-submit{
+	background: transparent url("/images/icons/share-facebook.gif") no-repeat 0 0px !important;
+}
+
+
+a#stumble-submit{
+	background: transparent url("/images/icons/share-stumble.gif") no-repeat 0 0px !important;
+}
+
+
+a#mail-link{
+	background: transparent url("/images/icons/share-email.gif") no-repeat 0 0px !important;
+}
+*/

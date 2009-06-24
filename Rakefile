@@ -5,9 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "layout"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{Generates basic beef layout}
     gem.email = "steve@wearebeef.co.uk"
-    gem.homepage = "http://github.com/stengland/layout"
+    gem.homepage = "http://github.com/beef/Layout"
     gem.authors = ["Steve England"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

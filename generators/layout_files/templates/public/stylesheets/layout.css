@@ -1,0 +1,64 @@
+/* 
+  LAYOUT
+  Page positioning of elements. Plus borders, padding, margins etc.
+  Note: border color and style sghould go in skin.css 
+*/
+
+/* skip to content link hide */
+#skip {
+	display: none;
+}
+
+/* so:main-layout */
+#page {
+	width: 750px;
+	margin: 0 auto;
+}
+
+#header {
+	border: 1px solid;
+	padding: 20px;
+}
+
+#content-area {
+	padding: 20px;
+}
+
+#main-content {
+	float: left;
+	width: 500px;
+}
+
+#supporting-content {
+	float: right;
+	width: 200px;
+}
+
+#footer {
+	padding: 20px;
+	clear: both;
+}
+/* eo:main-layout */
+
+.fieldWithErrors {
+	display: inline;
+}
+
+/* so:clearfix */
+
+#content-area:after,
+#footer:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both;
+	visibility: hidden;
+}
+
+/* eo:clearfix */ 
+
+
+/* adblock tab hide */
+.sIFR-replaced > div {
+display: none !important;
+}

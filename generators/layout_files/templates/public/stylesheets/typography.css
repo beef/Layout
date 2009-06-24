@@ -1,0 +1,45 @@
+/* 
+ TYPOGRAPHY
+ Font related information only (ie. font-*, text-*, line-height )
+ See http://www.alistapart.com/articles/howtosizetextincss for sizing technique
+
+*/
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", arial, verdana, sans-serif;
+  	/*font-size:100%; - This is defined in the reset.css so dont need it here*/
+  	line-height:1.125em; /* 16×1.125=18 */
+}
+h1, h2, h3, h4, h5, h6{
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 	2.125em;
+}
+
+h2 {
+	font-size: 1.625em;
+}
+
+ul#navigation {
+  font-size: 0.875em;
+}
+
+p {
+	font-size: 0.6875em;
+}
+
+#footer {
+	font-size: 0.625em;
+}
+
+.supporting-content h2 {
+	font-size:  1.375em;
+}
+
+/* Tag Cloud */
+
+.tag1 { font-size: .875em; }
+.tag2 { font-size: 1em; }
+.tag3 { font-size: 1.25em; }
+.tag4 { font-size: 1.375em; }

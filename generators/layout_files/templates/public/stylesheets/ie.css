@@ -1,0 +1,8 @@
+/* so:clearfix */ 
+
+#main-content,
+#footer {
+	height: 1%;
+}
+
+/* eo:clearfix */ 

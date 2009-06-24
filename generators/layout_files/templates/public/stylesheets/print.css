@@ -1,0 +1,59 @@
+/*--------------------------------------
+A quick guide to the print style sheet, 
+by Liam Richardson, age 21 and one quarter
+
+Now this uses some intresting rulles i discovered in an old 'a list appart' article. 
+Basicaly, it starts by making everything black and white, with headings with some padding to space them out.
+
+Links are set to blue and are underlined so they standout on both b+w and colour printers 
+
+Then there is some CSS3 stuff that adds the full URL after the link. Very Clever. 
+
+The first one just takes any link and adds the URL
+
+The Second rule takes all impbedded links (all those that begin with a "/") and adds the site url to create a full link, 
+as otherwise "/news/01/01/2008/news.html" would be quite useless on a printout. 
+
+so "/news/01/01/2008/news.html"  becomes "http://www.a-website.com/news/01/01/2008/news.html" on the print out.
+
+This neeeds to be tested furthur on every site, but looks quite intresting for now. 
+
+----------------------------------------*/
+
+
+
+body {
+   background: #fff;
+   color: #000;
+   font-size: 12pt;
+}
+
+h1, h2, h3 {
+	padding-bottom: 5px;
+	background: #fff;
+    color: #000;
+}
+
+a:link, a:visited {
+   color: #0000ff;
+   background: transparent;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+#main-content a:link:after, #main-content a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 90%;
+}
+
+#main-content a[href^="/"]:after {
+   content: " (http://www.a-website.com" attr(href) ") ";    	/*This URL needs to be changed to the URL of the site. */
+}
+
+/*Add elements here that dont need to be printed (add banners, unneccesary images etc )*/
+a#skip,
+ul.tag-cloud,
+ul.archive{
+	display: none;
+}
+

@@ -1,0 +1,23 @@
+body {
+   background: #fff;
+   color: #000;
+   font-size: 12pt;
+}
+
+h1, h2, h3 {
+	background: #fff;
+    color: #000;
+}
+
+a:link, a:visited {
+   color: #0000ff;
+   background: transparent;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+/*Add elements here that dont need to be printed (add banners, unneccesary images etc )*/
+/*a#skip{
+	display: none;
+}*/
+
