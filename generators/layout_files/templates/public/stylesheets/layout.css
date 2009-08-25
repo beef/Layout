@@ -56,9 +56,3 @@
 }
 
 /* eo:clearfix */ 
-
-
-/* adblock tab hide */
-.sIFR-replaced > div {
-display: none !important;
-}

@@ -1,0 +1,91 @@
+h1, h2, h3 {
+	clear: both;
+}
+
+#nav {
+	margin: 0 40px;
+}
+
+.column {
+width:28%;
+margin:0 25px 0 25px;
+float:left;
+}
+
+#our-work .column img, 
+#case .column img {
+width:100%;
+background:#eee;
+}
+
+ul.rating {float:right;}
+ul.rating li {float:left;background:none; }
+
+#articles #main-content img,
+#team-members .column img {
+float:left;
+margin:0 10px 0 0;
+}
+
+#footer-nav li, 
+.show #main-content img {
+float:left;
+}
+
+.show #main-content img {
+margin:0 20px 0 0;
+}
+
+.job-title {
+font-weight:bold;
+}
+
+textarea {
+height:120px;
+}
+
+#footer p {
+float:left;
+margin:0 0 10px 0;
+}
+
+body#articles #main-content {
+float:left; width:660px;
+}
+
+body#articles #supporting-content, 
+body#articles #supplementary-content {
+float:right; width:300px;
+}
+
+#home.index #content-wrap,
+#team-members.index #content-wrap,
+#case-studies.index #content-wrap,
+#case-studies.show #content-wrap,
+body#articles #content-wrap {
+background:none;
+}
+
+#home.index #content,
+#team-members.index #content,
+#case-studies.index #content,
+#case-studies.show #content,
+body#articles #content {
+margin: 0
+}
+
+/* so:clearfix */
+ul.gallery:after,
+#our-work:after,
+#article-title:after,
+#team-members:after,
+body:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both;
+	visibility: hidden;
+}
+
+/* eo:clearfix */
+

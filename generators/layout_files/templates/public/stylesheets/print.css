@@ -51,9 +51,7 @@ a:link, a:visited {
 }
 
 /*Add elements here that dont need to be printed (add banners, unneccesary images etc )*/
-a#skip,
-ul.tag-cloud,
-ul.archive{
+a#skip {
 	display: none;
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><%= Settings.site_name %> | <%=h page_title %></title>
+<title> <%=h Settings.site_name %> | <%=h page_title %></title>
 <!-- so:meta-tags  -->
 
 <meta name="description" content="<%=h page_description %>" />
@@ -22,63 +22,72 @@
 <link rel="Bookmark" href="http://www.wearebeef.co.uk/" title="Beef" />
 
 <!-- so:stylesheets -->
-<%= stylesheet_link_tag 'reset', 'typography', 'layout', 'skin', 'forms', :cache => 'screen', :media=>'screen,tv,projection' %>
-
-<%= stylesheet_link_tag 'print', :media=>'print' %>
+<%= stylesheet_link_tag 'wireframe/main', 'wireframe', :media => 'screen,tv,projection' %>
+<!-- replace with 'reset', 'typography', 'layout', 'skin', 'forms' and ad  :cache => "main" when you start styling -->
+<%= stylesheet_link_tag 'wireframe/print', :media=>'print' %>
+<!-- remove with 'wireframe/' when you start styling -->
 <%= stylesheet_link_tag 'mobile', :media=>'handheld' %>
 
-<!--[if IE]><link href="/stylesheets/ie.css" media="screen" rel="Stylesheet" type="text/css" /><![endif]-->
-<!--[if IE 6]><link href="/stylesheets/ie6.css" media="screen" rel="Stylesheet" type="text/css" /><![endif]-->
-
+<!--[if lte IE 6]>
+<%= stylesheet_link_tag 'wireframe/ie6', :media=>'screen' %>
+<![endif]-->
+<!--[if lte IE 7]>
+<%= stylesheet_link_tag 'wireframe/ie7', :media=>'screen' %>
+<![endif]-->
+<!-- remove with 'wireframe/' when you start styling -->
 <!-- eo:stylesheets -->
+
+<!-- so:javascript  -->
+<script src="http://www.google.com/jsapi"></script>
+<script>
+  // Load jQuery
+  google.load("jquery", "1.3.2");
+  // google.load("swfobject", "2.2");
+</script>
+<%= javascript_include_tag 'application', :cache => 'global' %>
+<!-- eo:javascript  -->
 
 <%= yield :header %>
 
 </head>
 <body id="<%= page_id %>" class="<%= page_class %>">
-<!-- so:screen -->
-<div id="page">
-	<!-- so:header -->
-	<div id="header">
-	  <a id="skip" href="#content-area">Skip to content</a>
-	  
-	  <h1><a href="/" id="logo"><%= Settings.site_name %></a></h1>
-  	<!-- so:navigation -->
-  	<ul id="navigation">
-  		<li id="home-nav"><a href="/" title="Home" >Home</a></li>
-  	</ul>
-  	<!-- eo:navigation -->
-  </div>
-	<!-- eo:header -->
-	
-	<div id="content-area">
-  <%= flash_messages %>
-	<%= yield %>
-	</div>
-	
-  <!-- so:footer -->
-	<div id="footer">
-  &copy; Copyright <%= Time.now.year %> <%= Settings.site_name %> &bull; <%= [Settings.house_number,Settings.street,Settings.district,Settings.town,Settings.county,Settings.region,( link_to Settings.postcode, "http://maps.google.co.uk/?q=#{Settings.postcode}")].reject{|e| e.blank? }.join(' ') %> &bull; <%= Settings.telephone %> 
-  	<a href="http://www.wearebeef.co.uk" id="beef-logo">With &hearts; from Beef</a>
-</div>
-  <!-- eo:footer -->
-	
-</div>
+  <div id="type-b">
+  <!-- so:screen -->
+    <div id="wrap">  
+      <div id="header">
+        <h1 id="site-name"><%= link_to h(Settings.site_name), '/', :id => "logo", :rel => "home" %></h1>
+        <ul id="nav">
+          <li><%= link_to "Page one" %></li>
+          <li><%= link_to "Page two" %></li>
+          <li><%= link_to "Page three" %></li>
+        </ul>
+      </div>
+      <div id="content-wrap">
+    
+        <div id="content">
+          <div id="breadcrumb">
+            <%= link_to 'Home', root_path %> / <strong><%= page_title %></strong>
+          </div>
+          <%= flash_messages %>
+          <%= yield %>
+        </div>
+  
+      </div><!-- en:content-wrap -->
 
-
-<!-- so:javascript  -->
-<%= javascript_include_tag 'prototype', 'effects', 'application', :cache => 'front' %>
-<% unless Settings.google_analytics_web_property_id.blank? %>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("<%= Settings.google_analytics_web_property_id %>");
-pageTracker._trackPageview();
-</script> 
-<% end -%>
-<!-- eo:javascript  -->
+      <div id="footer">
+        <%= yield :footer %> 
+        <ul id="footer-nav">
+          <li><%= link_to "Page one" %></li>
+          <li><%= link_to "Page two" %></li>
+          <li><%= link_to "Page three" %></li>
+        </ul>
+        <div class="vcard">
+          &copy; <%= Time.now.year %> <span class="fn org"><%=h Settings.site_name %></span> |
+          <span class="email"><a href="mailto:<%=h Settings.default_email %>" title="e-mail us"><%=h Settings.default_email %></a></span>
+        </div><!-- eo:vcard -->
+      </div><!-- eo:footer -->
+    </div><!-- en:wrap -->
+  </div><!-- en:page-type -->
 </body>
 </html>
 
