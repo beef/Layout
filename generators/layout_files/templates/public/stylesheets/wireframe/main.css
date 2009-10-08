@@ -26,45 +26,55 @@ a:hover,a:active {color:}
 form {margin: 0 0 1.5em}
 input {font-family: arial,tahoma,verdana,sans-serif;margin: 2px 0}
 fieldset {border: none}
-label {display:block;padding: 5px 0}
+label {display:block;}
 label br {clear:left}
 
+/* ERRORS */
+#errorExplanation {
+	margin-top: -1.5em;
+	padding-left: 20px;
+}
+
+.fieldWithErrors {
+	color: red;
+}
+
 	/* FORMS - general classes */
-	input.f-submit {padding: 1px 3px;background:#666;color:#fff;font-weight:bold;font-size:96%}
+	input.f-submit {padding: 1px 3px;background:#666;color:#fff;font-weight:bold;font-size:96%;}
 	
 	/* FORMS - f-wrap-1 - simple form, headings on left, form elements on right */
-	form.f-wrap-1 {width:100%;padding: .5em 0;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%;border-top: 1px solid #d7d7d7;position:relative}
-		form.f-wrap-1 fieldset {width:auto;margin: 0 1em}
-		form.f-wrap-1 h3 {margin:0 0 .6em;font: bold 155% arial;color:#c00}
-		form.f-wrap-1 label {clear:left;float:left;width:100%;border-top: 1px solid #fff}
+	form {width:100%;padding: 1em 0;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%;border-top: 1px solid #d7d7d7;position:relative}
+		form fieldset {width:auto;margin: 0 1em}
+		form h3 {margin:0 0 .6em;font: bold 155% arial;color:#c00}
+		form label {clear:left;float:left;width:100%;padding-left: 20px;}
 		
 		/* hide from IE mac \*/
-		form.f-wrap-1 label {float:none}
+		form label {float:none}
 		/* end hiding from IE5 mac */
 	
-		form.f-wrap-1 label input, form.f-wrap-1 label textarea, form.f-wrap-1 label select {width:15em;float:left;margin-left:10px}
+		form label input, form label textarea, form label select {width:15em;float:left;margin-left:10px}
 		
-		form.f-wrap-1 label b {float:left;width:8em;line-height: 1.7;display:block;position:relative}
-		form.f-wrap-1 label b .req {color:#c00;font-size:150%;font-weight:normal;position:absolute;top:-.1em;line-height:1;left:-.4em;width:.3em;height:.3em}
-		form.f-wrap-1 div.req {color:#666;font-size:96%;font-weight:normal;position:absolute;top:.4em;right:.4em;left:auto;width:13em;text-align:right}
-		form.f-wrap-1 div.req b {color:#c00;font-size:140%}
-		form.f-wrap-1 label select {width: 15.5em}
-		form.f-wrap-1 label textarea.f-comments {width: 20em}
-		form.f-wrap-1 div.f-submit-wrap {padding: 5px 0 5px 8em}
-		form.f-wrap-1 input.f-submit {margin: 0 0 0 10px}
+		form label {float:left;width:140px;line-height: 1.7;display:block;position:relative}
+		form label.req {color:#c00;font-size:150%;font-weight:normal;position:absolute;top:-.1em;line-height:1;left:-.4em;width:.3em;height:.3em}
+		form .req {color:#666;font-size:96%;font-weight:normal;position:absolute;top:.4em;right:.4em;left:auto;width:13em;text-align:right}
+		form .req b {color:#c00;font-size:140%}
+		form label select {width: 15.5em}
+		form label textarea {width: 20em}
+		form .submit {padding: 5px 0 5px 8em}
+		form input.f-submit, #comment-form .buttons input {margin: 10px 0 0 160px}
 		
-		form.f-wrap-1 fieldset.f-checkbox-wrap, form.f-wrap-1 fieldset.f-radio-wrap {clear:left;float:left;width:32em;border:none;margin:0;padding-bottom:.7em}
-		form.f-wrap-1 fieldset.f-checkbox-wrap b, form.f-wrap-1 fieldset.f-radio-wrap b {float:left;width:8em;line-height: 1.7;display:block;position:relative;padding-top:.3em}
-		form.f-wrap-1 fieldset.f-checkbox-wrap fieldset, form.f-wrap-1 fieldset.f-radio-wrap fieldset {float:left;width:13em;margin: 3px 0 0 10px}
-		form.f-wrap-1 fieldset.f-checkbox-wrap label, form.f-wrap-1 fieldset.f-radio-wrap label {float:left;width:13em;border:none;margin:0;padding:2px 0;margin-right:-3px}
-		form.f-wrap-1 label input.f-checkbox, form.f-wrap-1 label input.f-radio {width:auto;float:none;margin:0;padding:0}
+		form fieldset {clear:left;float:left;width:32em;border:none;margin:0;padding-bottom:.7em}
+		form fieldset b {float:left;width:8em;line-height: 1.7;display:block;position:relative;padding-top:.3em}
+		form fieldset fieldset {float:left;width:13em;margin: 3px 0 0 10px}
+		form fieldset label {float:left;width:13em;border:none;margin:0;padding:2px 0;margin-right:-3px}
+		form label input.f-checkbox, form label input.f-radio {width:auto;float:none;margin:0;padding:0}
 		
-		form.f-wrap-1 label span.errormsg {position:absolute;top:0;right:-10em;left:auto;display:block;width:16em;background: transparent url(images/errormsg_bg.gif) no-repeat 0 0}
-		form.f-wrap-1 label span.errormsg b {padding: 10px 0;margin: 0 10px 0 30px;color:#B30800;font-weight:bold;display:block;width:auto;float:none;line-height:1.3}
+		form label span.errormsg {position:absolute;top:0;right:-10em;left:auto;display:block;width:16em;background: transparent url(images/errormsg_bg.gif) no-repeat 0 0}
+		form label span.errormsg b {padding: 10px 0;margin: 0 10px 0 30px;color:#B30800;font-weight:bold;display:block;width:auto;float:none;line-height:1.3}
 
 /* TYPOGRAPHY */
 p, ul, ol {margin: 0 0 1.5em}
-h1, h2, h3, h4, h5, h6 {letter-spacing: -1px;font-family: arial,verdana,sans-serif;margin: 1.2em 0 .3em;color:#000;border-bottom: 1px solid #eee;padding-bottom: .1em}
+h1, h2, h3, h4, h5, h6 {letter-spacing: -1px;font-family: arial,verdana,sans-serif;margin: 1.2em 0 .3em;color:#000;border-bottom: 1px solid #eee;padding-bottom: .1em;clear:both;}
 h1 {font-size: 196%;margin-top:.6em}
 h2 {font-size: 136%}
 h3 {font-size: 126%}
@@ -85,6 +95,7 @@ ul {margin: .3em 0 1.5em 0;list-style-type:none}
 ol {margin: .5em .5em 1.5em}
 ol li {margin-left: 1.4em;padding-left: 0;background: none; list-style-type: decimal}
 li {line-height: 1.4em;padding-left: 25px;background: transparent url("images/sprites.gif") no-repeat 0 0}
+ul.gallery li  {background: none; float: left;}
 li.doc {background-position: 3px -500px}
 ul.nomarker li {background:none;padding-left:0}
 
@@ -146,15 +157,14 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 /* LAYOUT - main body of page */
 #wrap {min-width:960px;max-width:1020px;margin: 0 auto;position:relative}
 #content-wrap {position:relative;width:100%}
-	#utility {position:absolute;top:0;left:25px;width:165px;border-top: 5px solid #999;padding-bottom: 40px}
-	#sidebar {position:absolute;top:0;right:25px;width:20%;border-top: 5px solid #999;padding-top: 1px;padding-bottom: 40px}
-
-#content {margin: 0 50px}
+#utility {position:absolute;top:0;left:25px;width:165px;border-top: 5px solid #999;padding-bottom: 40px}
+#sidebar {position:absolute;top:0;right:25px;width:20%;border-top: 5px solid #999;padding-top: 1px;padding-bottom: 40px}
+#content {margin: 0 50px;min-height: 400px;}
 	#content #breadcrumb {margin-top:-5px;font-size:93%;font-weight:bold}
 	#content #breadcrumb a:link, #content #breadcrumb a:visited {text-decoration:none}
 	#content #breadcrumb a:hover, #content #breadcrumb a:active {text-decoration:underline}
 	
-	.featurebox {color:#333;padding: 15px 20px 20px;border-top: 1px solid #d7d7d7;margin: 0 0 1.5em;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%}
+	.featurebox {color:#333;padding: 15px 20px 20px;border-top: 1px solid #d7d7d7;margin: 0;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%}
 	.featurebox p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {margin: 0 0 .3em;border-bottom: 1px solid #c00;color:#c00}
 	.featurebox p {border:none;margin: 0 0 1em;color:#444}
 	.featurebox a {font-weight:bold}
@@ -162,13 +172,45 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 	.thumbnail {margin: 0 0 0 10px;position:relative;z-index:9999;border: 1px solid #eee;float:right;width:100px;padding:5px;background:#fff}
 	.thumbnail img {border: 1px solid #000}
 	
-	.pagination {background: #f2f2f2;color:#666;padding: 4px 2px 4px 7px;border: 1px solid #ddd;margin: 0 0 1.5em}
+/*	.pagination {background: #f2f2f2;color:#666;padding: 4px 2px 4px 7px;border: 1px solid #ddd;margin: 0 0 1.5em}
 	.pagination p {position:relative;text-align:right}
 	.pagination p a:link, .pagination p a:visited, .pagination p a:hover, .pagination p a:active {text-decoration:none;background:#fff;padding:2px 5px;border: 1px solid #ccc}
 	.pagination p a:hover {background:#c00;color:#fff}
 	.pagination p span {text-decoration:none;background:#fff;padding:2px 5px;border: 1px solid #ccc;color:#ccc}
 	.pagination * {margin:0}
-	.pagination h4 {margin-top:-1.45em;padding:0;border:none}
+	.pagination h4 {margin-top:-1.45em;padding:0;border:none}*/ 
+	
+	.pagination {
+		background: #f2f2f2;
+		color:#666;
+	  text-align: center;
+	  padding: .3em;
+	 	border: 1px solid #ddd }
+	  .pagination a, .pagination span {
+	    padding: .2em .5em;
+	 		background: #fff;}
+	  .pagination span.disabled {
+	    color: #AAA; }
+	  .pagination span.current {
+	    font-weight: bold;
+	    color: #000; }
+	  .pagination a {
+	    border: 1px solid #DDDDDD;
+	    color: #c00;
+	    text-decoration: none; }
+	    .pagination a:hover, .pagination a:focus {
+	      border-color: #666;
+	      background: #c00;
+	      color: white; }
+	  .pagination .page_info {
+	    color: #aaa;
+	    padding-top: .8em; }
+	  .pagination .prev_page, .pagination .next_page {
+	    border-width: 2px; }
+	  .pagination .prev_page {
+	    margin-right: 1em; }
+	  .pagination .next_page {
+	    margin-left: 1em; }
 	
 	#resultslist-wrap {margin: 0 0 1.5em;font-size:92%}
 	#resultslist-wrap dt, #resultslist-wrap dl {margin: 0}
@@ -221,6 +263,31 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 /* LAYOUT TYPE C */
 	#type-c #content-wrap {background: transparent url("images/content_wrap_bg.gif") repeat-y 30px 0}
 	#type-c #content {margin: 0 25% 0 235px}
+	#type-c #content:after {
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both;
+		visibility: hidden;
+	}
+	
+	#type-c #main-content, #type-c #sidebar {
+		float: left;
+		position: relative;
+	}
+	
+	#type-c #sidebar {
+		width: 250px;
+		float: right;
+	}
+	
+	#type-c #main-content {
+		width: 475px;
+	}
+	
+	#type-c #content {
+		width: 780px;
+	}
 
 /* LAYOUT TYPE D */
 	#type-d #content {margin: 0 25% 0 50px}
@@ -287,3 +354,21 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 #footer {clear:both; border-top: 1px solid #E3E8EE;padding: 10px 0 30px;font-size:86%;color:#999; background:#fff;}
 	#footer p {margin:0}
 	#footer a:link {color:#999}
+	#footer li { float:left; }
+	#footer .vcard { clear:both; margin: 40px 20px; }
+	
+/* ARTICLES */
+dl#articles dt img, #main-content p img {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 0 10px 10px 0;
+}
+
+#main-content p img {
+	float: left;
+}
+
+a.rss {
+	display: block;
+	width: auto;
+}
