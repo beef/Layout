@@ -3,23 +3,149 @@
  Font related information only (ie. font-*, text-*, line-height )
  See http://www.alistapart.com/articles/howtosizetextincss for sizing technique
  for a quick note - just hit this: http://jontangerine.com/silo/css/pixels-to-ems/ very easy guide to use.
+
+	10px 	{font-size:0.625em;}
+	11px 	{font-size:0.688em;}
+	12px 	{font-size:0.75em;}
+	13px 	{font-size:0.813em;}
+	14px 	{font-size:0.875em;}
+	15px 	{font-size:0.938em;}
+	16px 	{font-size:1em;}
+	17px 	{font-size:1.063em;}
+	18px 	{font-size:1.125em;}
+	19px 	{font-size:1.188em;}
+	20px 	{font-size:1.25em;}
+	21px 	{font-size:1.313em;}
+	22px 	{font-size:1.375em;}
+	23px 	{font-size:1.438em;}
+	24px 	{font-size:1.5em;}
+
 */
-body {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", arial, verdana, sans-serif;
+
+/* so:font-family */
+
+body, textarea {
+	font-family: 'Arial', verdana, sans-serif;
 }
 
-/* 34px */
-h1 {
-	font-size: 2.125em;
-}
+/* eo:font-family */
 
-/* 26px */
-h2 {
-	font-size: 1.625em;
-}
+/* so:font-sizes */
 
-/* 14px */
-ul#navigation,
-#footer {
-	font-size: 0.875em;
-}
+	/* 10px */ 	
+	{
+		font-size:0.625em;
+	}
+
+	/* 11px */	
+	{
+		font-size:0.688em;
+	}
+
+	/* 12px */ 	
+	{
+		font-size:0.75em;
+	}
+
+	/* 13px */ 	
+	{
+		font-size:0.813em;
+	}
+
+	/* 14px */ 	
+	{
+		font-size:0.875em;
+	}
+
+	/* 15px */ 	
+	{
+		font-size:0.938em;
+	}
+
+	/* 16px */ 	
+	{
+		font-size:1em;
+	}
+
+	/* 17px */ 	
+	{
+		font-size:1.063em;
+	}
+
+	/* 18px */ 	
+	{
+		font-size:1.125em;
+	}
+
+	/* 19px */ 	
+	{
+		font-size:1.188em;
+	}
+
+	/* 20px */ 	
+	{
+		font-size:1.25em;
+	}
+
+	/* 21px */ 	
+	{
+		font-size:1.313em;
+	}
+
+	/* 22px */ 	
+	{
+		font-size:1.375em;
+	}
+
+	/* 23px */	
+	{
+		font-size:1.438em;
+	}
+
+	/* 24px */	
+	{
+		font-size:1.5em;
+	}
+
+/* eo:font-sizes */
+
+/* so:font-styles */
+
+	/* Bold */
+	{
+		font-weight: bold;
+	}
+
+	/* Italic */
+	{
+		font-style: italic;
+	}
+
+	/* Underline */
+	{
+		text-decoration: underline;
+	}
+
+	/* Unordered List */
+#main-content ul	{
+		list-style-type: disc; 
+	}
+
+	/* Ordered List */
+#main-content ol	{
+		list-style-type: decimal;
+	}
+
+	/* Uppercase */
+	{
+		text-transform: uppercase;
+	}
+
+	/* Normal */
+	{
+		text-decoration: none;
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+/* eo:font-styles */

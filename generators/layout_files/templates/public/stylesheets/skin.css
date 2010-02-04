@@ -2,3 +2,79 @@
   SKIN
   All colour and background image styling.
 */
+
+body {
+	background: #fff;
+	color: #000000;
+}
+
+/* so:header */
+/* eo:header */
+
+/* so:footer */
+/* eo:footer */
+
+/* so:links */
+
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+/* eo:links */
+
+/* so:pages */
+/* eo:pages */
+
+/* so:articles */
+
+#supporting-content ul.archive li.current ul {display: inline;}
+#supporting-content ul.archive li ul {display:none;}
+#supporting-content ul.archive li ul span  {display:none;}
+
+/* eo:articles */
+
+	/* so:comments */
+	/* eo:comments */
+
+	/* so:pagination */
+	/* eo:pagination */
+
+/* so:contacts */
+/* eo:contacts */
+
+/* so:sessions */
+/* eo:sessions */
+
+/* so:error */
+/* eo:error */
+
+/* so:image-replacement */
+
+{
+	overflow: hidden;
+	text-align: left;
+	display: block;
+	line-height:0;
+	text-indent: -1000em;
+}
+
+/* eo:image-replacement */
+
+/* so:wireframes -- DELETE AT START OF NEW PROJECT -- */	
+
+/*#header,
+#banner,
+#supporting-content,
+#main-content,
+#footer {
+	background:#e3e3e3;
+}*/
+
+.wireframe {
+text-align: center;
+}
+
+dl#articles dd {
+	border-bottom: 1px dotted black;
+}
+
+/* eo:wireframes -- DELETE AT START OF NEW PROJECT -- */

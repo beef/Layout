@@ -10,35 +10,187 @@
 }
 
 /* so:main-layout */
-#page {
-	width: 750px;
+#wrap {
+	width: 940px;
 	margin: 0 auto;
+	position: relative;
 }
 
 #header {
-	border: 1px solid;
-	padding: 20px;
+	height: 65px;
+	width: 940px;
+	position: relative;
 }
 
-#content-area {
-	padding: 20px;
+#content {
+	margin:20px 0;
 }
 
 #main-content {
-	float: left;
-	width: 500px;
+	float: right;
+	width: 640px;
+	padding:20px;
 }
 
 #supporting-content {
-	float: right;
+	float: left;
 	width: 200px;
+	padding:20px;
+	position:relative;
 }
 
 #footer {
-	padding: 20px;
 	clear: both;
+	text-align: right;
+	padding:20px;
 }
 /* eo:main-layout */
+
+
+/*so:header*/
+h1#site-name {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+/*eo:header*/
+
+/*so:nav*/
+ul#nav {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+ul#nav li {
+	float: left;
+	margin-left: 20px;
+}
+/*eo:nav*/
+
+/*so:home*/
+
+#banner {
+	margin: 0 auto 20px;
+	padding:100px 0px;
+}
+
+/*eo:home*/
+
+
+/*so:articles*/
+ 
+body.show #main-content h1:first-child {
+	margin-bottom: 20px;
+	padding-bottom:5px;
+}
+
+dl#articles dt{padding-bottom:5px; margin-bottom: 20px}
+dl#articles dd {margin-bottom:18px;}
+	dl#articles dd p {padding-bottom:15px;}
+
+#supporting-content h2,
+#main-content h4 {
+	margin-bottom:20px; padding-bottom:9px;
+}
+
+#main-content h4#share-title {
+	margin-bottom:10px;
+}
+
+#content #main-content p.share-links {
+	margin-bottom:10px;
+}
+
+#main-content p.share-links a,
+#main-content p.share-links a {
+	margin-right:10px;
+}
+
+#supporting-content a.back,
+#supporting-content a.rss {
+	position:absolute;
+	left:0px;
+	bottom:-40px;
+}
+
+
+#supporting-content ul.archive li {margin-bottom:5px;}
+#supporting-content ul.archive li a {padding-left:10px;}
+#supporting-content ul.archive li ul {margin:0px 0px 10px 0px;}
+#supporting-content ul.archive li ul li {margin:5px 0px 0px 0px;}
+#supporting-content ul.archive li ul li a {margin:0px 0px 0px 20px;}
+#supporting-content ul.archive li span {width:10px; height:15px; float:left;}
+
+#main-content ul.gallery {margin-bottom:10px; list-style-type:none; margin-left:0;}
+ul.gallery li {padding-bottom:5px; margin-right:10px;float:left;}
+
+#main-content ul.documents {margin-bottom:10px; list-style-type:none; margin-left:0;}
+ul.documents li {padding-bottom:5px;}
+
+body.show #main-content p.post-meta {margin-bottom:20px;}
+
+dl#articles dd img {float:left; margin:0 20px 0 0;}
+dl#articles dt {clear:both;}
+
+#content #main-content h1 + img {margin-bottom:20px;}
+#content #main-content p img {margin:0 20px 10px 0;}
+body.show #content #main-content p.post-meta {clear:both;}
+
+#main-content ul,
+#main-content ol {
+	margin-bottom:10px;
+	margin-left:20px;
+}
+
+/*eo:articles*/
+
+/*so:comments*/
+
+#main-content #comments h2 {padding-bottom:5px; margin-bottom:20px;}
+body#comments h1 {padding-bottom:5px; margin-bottom:20px;}
+
+#comments ul#comment-list {list-style-type:none; margin:0;}
+#comments ul#comment-list li {padding-left:40px; margin-bottom:20px;}
+#comments ul#comment-list li span.comment {margin:10px 0 0;}
+#comments ul#comment-list li p, #main-content #comments form p {margin:0;}
+
+#main-content #comments h2#respond,
+#main-content #comments form,
+#main-content #comments p {
+	margin-left:40px;
+}
+
+body#comments #comment-wrapper {float: left; width: 540px;}
+body#comments #errorExplanation {margin-bottom:20px;}
+
+/*eo:comments*/
+
+/*so:pagination*/
+
+div.pagination {clear:both;}
+
+/*eo:pagination*/
+
+/*so:contacts*/
+
+body#contacts #supporting-content h2 {padding-bottom: 10px; margin-bottom: 20px;}
+body#contacts .adr {margin-bottom: 15px;}
+
+/*eo:contacts*/
+
+/*so:sessions*/
+
+body#sessions #content #supporting-content {
+	padding:15px 20px 44px 20px;
+	width:200px;
+}
+
+body#sessions #content #supporting-content h2 {
+	margin-bottom:20px; padding-bottom:9px;
+}
+
+/*eo:sessions*/
 
 .fieldWithErrors {
 	display: inline;
@@ -46,8 +198,10 @@
 
 /* so:clearfix */
 
-#content-area:after,
-#footer:after {
+#content:after,
+#footer:after,
+ul.gallery:after,
+dl#articles dd p.description:after {
 	content: "."; 
 	display: block; 
 	height: 0; 

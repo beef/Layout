@@ -58,6 +58,7 @@ q:before, q:after {
 
 blockquote, q {
 	quotes: "" "";
+	font-style:italic;
 }
 
 fieldset, img{
@@ -72,3 +73,7 @@ caption,th {
 	text-align:left;
 }
 
+p {padding-bottom: 10px;}
+
+strong {font-weight:bold;}
+em {font-style:italic;}

@@ -1,1 +1,8 @@
 /* IE 7 fixes */
+
+#content,
+#footer,
+ul.gallery,
+body#flipside dl#articles dd p.description {
+	height: 1%;
+}
