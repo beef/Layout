@@ -1,0 +1,22 @@
+#header { background: #2b618e; }
+#header h1 a { color: #d3e6f6; }
+#header ul li a { color: #d3e6f6; }
+#banner {
+  background: #333333;
+  color: white;
+}
+#content h1 { color: #2b618e; }
+#content h2 { color: #2b618e; }
+#supporting-content ul li a { color: #2b618e; }
+#supporting-content ul li a:hover {
+  background: #2b618e;
+  color: #d3e6f6;
+}
+#footer {
+  background: #333333;
+  color: white;
+}
+#footer a { color: #d3e6f6; }
+#footer a:hover { background: #2b618e; }
+#main-content a img { border: 5px solid white; }
+#main-content a:hover img { border: 5px solid #d3e6f6; }
