@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{beef-layout}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Steve England"]
-  s.date = %q{2010-02-05}
+  s.date = %q{2010-02-10}
   s.email = %q{steve@wearebeef.co.uk}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -25,7 +25,9 @@ Gem::Specification.new do |s|
      "beef-layout.gemspec",
      "generators/layout_files/layout_files_generator.rb",
      "generators/layout_files/templates/application_layout.html.erb",
+     "generators/layout_files/templates/public/javascripts/Gotham_Medium_500.font.js",
      "generators/layout_files/templates/public/javascripts/application.js",
+     "generators/layout_files/templates/public/javascripts/cufon-yui.js",
      "generators/layout_files/templates/public/stylesheets/forms.css",
      "generators/layout_files/templates/public/stylesheets/ie6.css",
      "generators/layout_files/templates/public/stylesheets/ie7.css",
@@ -34,12 +36,10 @@ Gem::Specification.new do |s|
      "generators/layout_files/templates/public/stylesheets/mobile.css",
      "generators/layout_files/templates/public/stylesheets/print.css",
      "generators/layout_files/templates/public/stylesheets/reset.css",
-     "generators/layout_files/templates/public/stylesheets/screen.css",
      "generators/layout_files/templates/public/stylesheets/skin.css",
      "generators/layout_files/templates/public/stylesheets/textile-editor.css",
      "generators/layout_files/templates/public/stylesheets/typography.css",
      "generators/layout_files/templates/public/stylesheets/wireframe.css",
-     "layout.gemspec",
      "lib/layout.rb",
      "rails/init.rb",
      "test/layout_test.rb",
