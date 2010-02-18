@@ -1,5 +1,5 @@
 class LayoutFilesGenerator < Rails::Generator::Base
-  
+
   def manifest
     record do |m|
       ["public/javascripts/application.js",
@@ -11,15 +11,14 @@ class LayoutFilesGenerator < Rails::Generator::Base
       "public/stylesheets/layout.css",
       "public/stylesheets/mobile.css",
       "public/stylesheets/print.css",
-      "public/stylesheets/screen.css",
       "public/stylesheets/reset.css",
       "public/stylesheets/skin.css",
       "public/stylesheets/typography.css"].each do |file|
          m.file file, file
       end
-      
-      m.file( 'application_layout.html.erb', File.join('app/views/layouts', 'application.html.erb')) 
+
+      m.file( 'application_layout.html.erb', File.join('app/views/layouts', 'application.html.erb'))
     end
   end
-  
+
 end
