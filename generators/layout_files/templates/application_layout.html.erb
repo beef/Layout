@@ -34,7 +34,7 @@
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
-  google.load("jquery", "1.4.1");
+  google.load("jquery", "1.4");
   // google.load("swfobject", "2.2");
 </script>
 <%= javascript_include_tag 'cufon-yui', 'Gotham_Medium_500.font', 'application', :cache => 'global' %>
@@ -44,54 +44,50 @@
 <%= yield :header %>
 
 </head>
-<body id="<%= page_id %>" class="<%= page_class %> <%= "comment-#{@comment.commentable.category.permalink}" unless @comment.nil? || @comment.commentable.nil? || @comment.commentable.category.nil?  %>">
+<body id="<%= page_id %>" class="<%= page_class %>">
 
   <!-- so:wrap-->
-    <div id="wrap">
-      
-      <!-- so:header -->
-        <div id="header">
-          <h1 id="site-name"><%= link_to h(Settings.site_name), '/', :id => "logo", :rel => "home" %></h1>
-        
-          <!-- so:navigation -->
-            <ul id="nav">
-<% for page in Page.top.published %>
-				<li id="nav-<%= page.permalink %>"><%= link_to page.title, page_path(page.permalink) %></li>
-<% end %>
-              <li id="nav-article"><%= link_to 'Articles', articles_path() %></li>
-          </ul>
-          <!-- so:navigation -->
-        
-        </div>
-      <!-- eo:header -->
-      
-      <!-- so:content --> 
-        <div id="content">
+  <div id="wrap">
 
-<% unless @page.nil? %>
-          <div id="breadcrumbs">
-            <%= link_to 'Home', root_path %> <%= "/ " unless @page.ancestors.empty? %><%= @page.ancestors.collect{ |a| link_to a.title, page_path(a) }.join(' / ') %> / <strong><%= page_title %></strong>
-          </div>
-<% end -%>
+    <!-- so:header -->
+    <div id="header">
+      <h1 id="site-name"><%= link_to h(Settings.site_name), '/', :id => "logo", :rel => "home" %></h1>
 
-          <%= flash_messages %>
-          <%= yield %>
-        </div>     
-      <!-- eo:content -->
-      
-      <!-- so:footer -->
-        <div id="footer">
-          <%= yield :footer %>
-          <p>
-            <%= Settings.telephone %><br />
-            <a href="mailto:<%= Settings.default_email %>"><%= Settings.default_email %></a>
-          </p>
-        </div>
-      <!-- eo:footer -->
-      
+      <!-- so:navigation -->
+      <ul id="nav">
+        <li id="nav-one"><%= link_to "Page One" %></li>
+        <li id="nav-two"><%= link_to "Page Two" %></li>
+      </ul>
+      <!-- so:navigation -->
+
     </div>
+    <!-- eo:header -->
+
+    <!-- so:content -->
+    <div id="content">
+
+      <div id="breadcrumbs">
+        <%= link_to 'Home', root_path %> / <strong><%= page_title %></strong>
+      </div>
+
+      <%= flash_messages %>
+      <%= yield %>
+    </div>
+    <!-- eo:content -->
+
+    <!-- so:footer -->
+    <div id="footer">
+      <%= yield :footer %>
+      <p>
+        <%= Settings.telephone %><br />
+        <a href="mailto:<%= Settings.default_email %>"><%= Settings.default_email %></a>
+      </p>
+    </div>
+    <!-- eo:footer -->
+
+  </div>
   <!-- en:wrap -->
-  
+
 <!-- so:javascript  -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -103,6 +99,5 @@ var pageTracker = _gat._getTracker("<%= Settings.google_analytics_web_property_i
 pageTracker._trackPageview();
 } catch(err) {}</script>
 <!-- eo:javascript  -->
-
 </body>
 </html>
