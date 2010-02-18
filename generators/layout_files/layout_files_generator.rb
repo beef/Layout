@@ -4,7 +4,7 @@ class LayoutFilesGenerator < Rails::Generator::Base
     record do |m|
       ["public/javascripts/application.js",
       "public/javascripts/cufon-yui.js",
-      "public/javascripts/Gotham_Medium_500.font.js"
+      "public/javascripts/Gotham_Medium_500.font.js",
       "public/stylesheets/forms.css",
       "public/stylesheets/ie6.css",
       "public/stylesheets/ie7.css",
