@@ -10,7 +10,11 @@ module Beef
     end
   
     def page_title
-      @page_title ||= controller.controller_name.titleize + (controller.action_name == 'index' ? " #{controller.action_name.titleize}" : ' ' )
+      if controller.controller_name != 'home'
+        @page_title ||= controller.controller_name.titleize + (controller.action_name == 'index' ? " #{controller.action_name.titleize}" : ' ' )
+      else 
+        Settings.home_page_title
+      end
     end
   
     def page_description
