@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Use fancy box on all images that link to an image
-  // $("a[href$=jpg], a[href$=png], a[href$=gif]").fancybox({  
+  // $("a").filter(function(){ return /(jpe?g|png|gif)$/i.test($(this).attr('href')); }).fancybox({  
   //     'zoomOpacity'     : true,
   //     'overlayShow'     : true,
   //     'zoomSpeedIn'     : 500,
@@ -9,7 +9,7 @@ $(document).ready(function(){
   //     'overlayOpacity'    : 0.9
   // });
   
-  $("a[href^=http]").attr('target', '_blank');
+  $("a").filter(function(){ return /^http:\/\//i.test($(this).attr('href')); }).attr('target', '_blank');
   
 });
 
